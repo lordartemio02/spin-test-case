@@ -93,9 +93,8 @@ function App() {
         viewMethods: ["markets"],
         changeMethods: ["addMessage"],
       }
-    );
+    ) as unknown as IContract;
 
-    //@ts-ignore
     const markets = await contract.markets({});
     setMarkets(markets);
     if (markets.length > 0) {
@@ -115,8 +114,7 @@ function App() {
         viewMethods: ["view_market"],
         changeMethods: ["addMessage"],
       }
-    );
-    //@ts-ignore
+    ) as unknown as IContract;
     const market = await contract.view_market({ market_id: id });
     setMarket(market);
   };
