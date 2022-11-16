@@ -11,6 +11,7 @@ import {
   providers,
   Contract,
 } from "near-api-js";
+import { IContract } from "./interfaces/Contract.interface";
 import { Buffer } from "buffer";
 import Big from "big.js";
 import { Markets } from "./interfaces/Markets.interface";
